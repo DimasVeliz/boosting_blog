@@ -1,11 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
   Outlet
 } from "react-router-dom"
+import Footer from "./components/Footer"
+import Navbar from "./components/Navbar"
+
 
 import Cloud from './pages/Cloud'
 import Login from './pages/Login'
@@ -14,6 +15,15 @@ import Single from './pages/Single'
 import Write from './pages/Write'
 import Home from './pages/Home'
 
+const Layout = () => {
+  return (
+    <>
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </>
+  )
+};
 
 const router = createBrowserRouter([
   {
@@ -48,19 +58,12 @@ const router = createBrowserRouter([
   }
 ]);
 
-const Layout = () => {
-  return (
-    <>
-      <Navbar />
-      <Outlet />
-      <Footer />
-    </>
-  )
-}
+
 
 function App() {
   return (
-    <div>
+    <div className='app'>
+      <div className='container'/>
       <RouterProvider router={router} />
     </div>
   );
