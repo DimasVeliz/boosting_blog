@@ -1,19 +1,19 @@
-import './App.css';
 import {
   createBrowserRouter,
   RouterProvider,
-  Outlet
-} from "react-router-dom"
-import Footer from "./components/Footer"
-import Navbar from "./components/Navbar"
+  Route,
+  Outlet,
+} from "react-router-dom";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+import Write from "./pages/Write";
+import Home from "./pages/Home";
+import Single from "./pages/Single";
+import Cloud from "./pages/Cloud";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
-
-import Cloud from './pages/Cloud'
-import Login from './pages/Login'
-import Register from './pages/Register'
-import Single from './pages/Single'
-import Write from './pages/Write'
-import Home from './pages/Home'
+import "./style.scss"
 
 const Layout = () => {
   return (
@@ -22,7 +22,7 @@ const Layout = () => {
       <Outlet />
       <Footer />
     </>
-  )
+  );
 };
 
 const router = createBrowserRouter([
@@ -32,39 +32,40 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />
+        element: <Home />,
       },
       {
-        path: "/single",
-        element: <Single />
+        path: "/post/:id",
+        element: <Single />,
       },
       {
         path: "/write",
-        element: <Write />
+        element: <Write />,
       },
-      {
-        path: "/cloud",
-        element: <Cloud />
-      },
-    ]
+    ],
   },
   {
-    path:"/register",
-    element:<Register/>
+    path: "/register",
+    element: <Register />,
   },
   {
-    path:"/login",
-    element:<Login/>
-  }
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/cloud",
+    element: <Cloud />,
+  },
 ]);
 
 
 
 function App() {
   return (
-    <div className='app'>
-      <div className='container'/>
-      <RouterProvider router={router} />
+    <div className="app">
+      <div className="container">
+        <RouterProvider router={router} />
+      </div>
     </div>
   );
 }
