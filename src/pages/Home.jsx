@@ -5,38 +5,39 @@ const Home = () => {
   const posts = [
     {
       id: 1,
-      title: "Sample Title 1",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor varius nulla in ullamcorper. Aliquam faucibus maximus odio. Suspendisse potenti.",
-      image: "https://via.placeholder.com/300x200.png?text=Sample+Image+1",
+      title: "Bash",
+      desc: "Bash is a powerful shell language that is commonly used in Unix-based systems. Learning Bash can help you automate repetitive tasks, work more efficiently with command-line interfaces, and become a more effective developer or system administrator.",
+      image: "https://via.placeholder.com/300x200.png?text=Bash+Image",
     },
     {
       id: 2,
-      title: "Sample Title 2",
-      desc: "Maecenas tristique quam vel est rhoncus, vel dignissim dolor pulvinar. Sed lacinia sagittis metus in euismod. Fusce pharetra, libero quis vestibulum varius, augue sapien laoreet magna, vitae bibendum turpis nisi in ex.",
-      image: "https://via.placeholder.com/300x200.png?text=Sample+Image+2",
+      title: "C++",
+      desc: "C++ is a fantastic programming language that is widely used in the development of high-performance software applications, such as operating systems, game engines, and scientific simulations. Learning C++ can help you become a more skilled and versatile software developer, and opens up many opportunities in the tech industry.",
+      image: "https://via.placeholder.com/300x200.png?text=C%2B%2B+Image",
     },
     {
       id: 3,
-      title: "Sample Title 3",
-      desc: "Pellentesque id malesuada massa. Vestibulum at velit massa. Aenean euismod nibh non est interdum, sit amet imperdiet ipsum laoreet. Fusce ac blandit sapien.",
-      image: "https://via.placeholder.com/300x200.png?text=Sample+Image+3",
+      title: "Python",
+      desc: "Python is a popular high-level programming language that is widely used in scientific computing, data analysis, machine learning, and web development. Learning Python can help you become a more effective and efficient programmer, and opens up many opportunities in the tech industry, particularly in the fields of data science and machine learning.",
+      image: "https://via.placeholder.com/300x200.png?text=Python+Image",
     },
     {
       id: 4,
-      title: "Sample Title 4",
-      desc: "Donec ornare, metus sit amet varius posuere, nunc neque gravida metus, id sagittis augue nisi eget mauris. Sed vitae eleifend libero. Mauris ultrices volutpat malesuada.",
-      image: "https://via.placeholder.com/300x200.png?text=Sample+Image+4",
+      title: "C#",
+      desc: "C# is a modern object-oriented programming language that is widely used in the development of Windows applications, web applications, and video games. Learning C# can help you become a skilled software developer, and opens up many opportunities in the tech industry.",
+      image: "https://via.placeholder.com/300x200.png?text=C%23+Image",
     },
     {
       id: 5,
-      title: "Sample Title 5",
-      desc: "Nullam vel tincidunt velit. Integer malesuada, sapien at congue ultrices, lectus turpis tincidunt eros, in bibendum quam est a eros. Sed et mauris sit amet ex suscipit faucibus nec quis sapien.",
-      image: "https://via.placeholder.com/300x200.png?text=Sample+Image+5",
+      title: "Coding",
+      desc: "Learning to code is a valuable skill in today's digital age, with applications in fields ranging from web development to data science to machine learning. Developing coding skills can help you become a more effective problem solver, a more efficient and productive worker, and open up many opportunities in the tech industry and beyond.",
+      image: "https://via.placeholder.com/300x200.png?text=Coding+Image",
     }
   ]
+  
   return (
-    <div className='home'>
-      <div className='post'>
+    <div className="home">
+      <div className="posts">
         {posts.map((post) => (
           <div className="post" key={post.id}>
             <div className="img">
