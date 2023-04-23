@@ -1,8 +1,68 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import Edit from "../img/edit.png"
+import Delete from "../img/delete.png"
+import Like from "../img/like.png"
+import Menu from "../components/Menu"
 
 const Single = () => {
+
+  const handleDelete = () => {
+
+  };
+
+  const handleLike = () => {
+
+  };
+
   return (
-    <div>Single</div>
+    <div className='single'>
+      <div className="content">
+        <img src="https://via.placeholder.com/1024x768.png?text=Bash+Image" alt="" />
+        <div className="user">
+          <img src="https://via.placeholder.com/100x100.png?text=Author+Image" alt="" />
+          <div className="info">
+            <span>Dimas</span>
+            <p>Posted 2 days ago</p>
+          </div>
+          <div className="like">
+            <Link to={`/write?edit=2`}>
+              <img src={Edit} alt="" />
+            </Link>
+            <img onClick={handleDelete} src={Delete} alt="" />
+            <img onClick={handleLike} src={Like} alt="" />
+
+          </div>
+        </div>
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget enim id sem eleifend auctor. In eu efficitur magna, quis condimentum justo. Praesent dictum neque vitae erat volutpat aliquet. Etiam fermentum blandit finibus. Integer ut bibendum nibh. Nullam vestibulum neque a laoreet auctor. Pellentesque molestie et lorem in efficitur. Nunc porta, ipsum eu egestas lobortis, turpis justo semper lectus, ac accumsan velit velit id quam. Duis dictum suscipit nisi, sed sodales dui malesuada vitae. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            <br />
+            <br />
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget enim id sem eleifend auctor. In eu efficitur magna, quis condimentum justo. Praesent dictum neque vitae erat volutpat aliquet. Etiam fermentum blandit finibus. Integer ut bibendum nibh. Nullam vestibulum neque a laoreet auctor. Pellentesque molestie et lorem in efficitur. Nunc porta, ipsum eu egestas lobortis, turpis justo semper lectus, ac accumsan velit velit id quam. Duis dictum suscipit nisi, sed sodales dui malesuada vitae. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+            Pellentesque molestie posuere pulvinar. Cras mattis tincidunt nisi, eget accumsan augue commodo in. Cras bibendum libero id odio efficitur posuere non in odio. Etiam congue volutpat mauris sed ornare. Proin urna ex, feugiat quis nisl elementum, congue venenatis mi. Cras pharetra, arcu non lacinia viverra, metus augue condimentum mauris, pharetra viverra ex sapien nec nulla. Nulla eu sodales sapien. Maecenas nibh massa, pretium at risus at, finibus laoreet nisi. In fringilla efficitur nisl, a ultrices turpis accumsan id.
+            <br />
+            <br />
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget enim id sem eleifend auctor. In eu efficitur magna, quis condimentum justo. Praesent dictum neque vitae erat volutpat aliquet. Etiam fermentum blandit finibus. Integer ut bibendum nibh. Nullam vestibulum neque a laoreet auctor. Pellentesque molestie et lorem in efficitur. Nunc porta, ipsum eu egestas lobortis, turpis justo semper lectus, ac accumsan velit velit id quam. Duis dictum suscipit nisi, sed sodales dui malesuada vitae. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+            Pellentesque molestie posuere pulvinar. Cras mattis tincidunt nisi, eget accumsan augue commodo in. Cras bibendum libero id odio efficitur posuere non in odio. Etiam congue volutpat mauris sed ornare. Proin urna ex, feugiat quis nisl elementum, congue venenatis mi. Cras pharetra, arcu non lacinia viverra, metus augue condimentum mauris, pharetra viverra ex sapien nec nulla. Nulla eu sodales sapien. Maecenas nibh massa, pretium at risus at, finibus laoreet nisi. In fringilla efficitur nisl, a ultrices turpis accumsan id.
+
+            Nulla id diam vel mauris imperdiet elementum. Integer metus dolor, vestibulum non laoreet vitae, feugiat eu mauris. Suspendisse vehicula elit non tortor molestie placerat. Vivamus vitae quam nec lectus tempus fringilla. Donec ac volutpat nisi, a tempor mi. Duis molestie vel turpis commodo aliquam. Ut ac vulputate lacus, sed bibendum ante. Donec congue, nibh ac molestie sollicitudin, enim nisl condimentum urna, in commodo nunc tortor at leo. Vestibulum tincidunt pulvinar felis at tincidunt. Praesent id cursus ligula, eu lacinia arcu.
+
+            <br />
+            <br />
+          </p>
+        </p>
+      </div>
+      <Menu />
+    </div>
   )
 }
 
