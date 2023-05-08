@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import api from '../service/api';
+import { AuthContext } from '../context/authContext';
 
 const Login = () => {
 
@@ -13,6 +13,8 @@ const Login = () => {
   });
   const [err, setError] = useState(null);
 
+  const { login} = useContext(AuthContext)
+
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
@@ -20,7 +22,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await api.login(inputs).then(response => console.log(response.data));
+      await login(inputs)
       navigate("/");
     } catch (err) {
       setError(err.response.data);
