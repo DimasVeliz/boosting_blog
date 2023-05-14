@@ -1,23 +1,34 @@
-import React, { useState,useEffect } from 'react';
-import { Link, useLocation } from "react-router-dom";
+import React, { useState,useEffect,useContext } from 'react';
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import api from '../service/api';
+import { AuthContext } from '../context/authContext';
 
 const Home = () => {
 
   const [topics, setTopics] = useState([]);
 
   const cat = useLocation().search
+  const navigate = useNavigate();
+
+  const { currentUser} = useContext(AuthContext)
 
   useEffect(() => {
-    const fetchTopics = async () => {
-      try {
-        const res = await api.getTopics();
-        setTopics(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    fetchTopics();
+
+    if(currentUser){
+
+      const fetchTopics = async () => {
+        try {
+          const res = await api.getTopics();
+          setTopics(res.data);
+        } catch (err) {
+          console.log(err);
+        }
+      };
+      fetchTopics();
+    }
+    else{
+      navigate("/login");
+    }
   }, [cat]);
 
 
